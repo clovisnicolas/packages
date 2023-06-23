@@ -101,6 +101,7 @@ class AdaptiveScaffold extends StatefulWidget {
     this.appBar,
     this.navigationRailWidth = 72,
     this.extendedNavigationRailWidth = 192,
+    this.resizeToAvoidBottomInset,
   });
 
   /// The destinations to be used in navigation items. These are converted to
@@ -123,6 +124,9 @@ class AdaptiveScaffold extends StatefulWidget {
   /// Option to display a trailing widget below the destinations of the
   /// navigation rail at the largest breakpoint.
   final Widget? trailingNavRail;
+
+  /// Option to resizeToAvoidBottomInset, will be passed to the underlying Scaffold
+  final bool? resizeToAvoidBottomInset;
 
   /// Widget to be displayed in the body slot at the smallest breakpoint.
   ///
@@ -639,6 +643,7 @@ class _AdaptiveScaffoldState extends State<AdaptiveScaffold> {
             },
           ),
         ),
+        resizeToAvoidBottomInset: resizeToAvoidBottomInset,
       ),
     );
   }

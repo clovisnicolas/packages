@@ -643,7 +643,7 @@ class _AdaptiveScaffoldState extends State<AdaptiveScaffold> {
             },
           ),
         ),
-        resizeToAvoidBottomInset: resizeToAvoidBottomInset,
+        resizeToAvoidBottomInset: widget.resizeToAvoidBottomInset,
       ),
     );
   }
